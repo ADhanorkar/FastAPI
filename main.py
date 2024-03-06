@@ -16,12 +16,18 @@ from fastapi import FastAPI
 # from requestBody import ReqBodyWithParam
 # from requestBody import ReqBodyParamQuery
 # from queryAnnotation import QueryParamValidation
-from queryAnnotation import MultipleQuery
-from queryAnnotation import QueryMetadata
+# from queryAnnotation import MultipleQuery
+# from queryAnnotation import QueryMetadata
+# from pathAnnotation import PathMetadata
+# from pathAnnotation import NumericValidation
+from bodyMultiParam import MultipleParam
 
 app = FastAPI()
 
-app.include_router(QueryMetadata.router)
+app.include_router(MultipleParam.router)
+# app.include_router(NumericValidation.router)
+# app.include_router(PathMetadata.router)
+# app.include_router(QueryMetadata.router)
 # app.include_router(MultipleQuery.router)
 # app.include_router(QueryParamValidation.router)
 # app.include_router(ReqBodyParamQuery.router)
