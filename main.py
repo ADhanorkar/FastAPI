@@ -20,11 +20,27 @@ from fastapi import FastAPI
 # from queryAnnotation import QueryMetadata
 # from pathAnnotation import PathMetadata
 # from pathAnnotation import NumericValidation
-from bodyMultiParam import MultipleParam
+# from bodyMultiParam import MultipleParam
+# from bodyFields import MetaDataValidations
+# from bodyNestedModels import ListFields
+# from bodyNestedModels import Sets
+# from bodyNestedModels import NestedModels
+# from bodyNestedModels import SpecialTypesValidation
+# from bodyNestedModels import DeeplyNestedModels
+# from bodyNestedModels import BodyAsLists
+from requestExample import WithReqExample
 
 app = FastAPI()
 
-app.include_router(MultipleParam.router)
+app.include_router(WithReqExample.router)
+# app.include_router(BodyAsLists.router)
+# app.include_router(DeeplyNestedModels.router)
+# app.include_router(SpecialTypesValidation.router)
+# app.include_router(NestedModels.router)
+# app.include_router(Sets.router)
+# app.include_router(ListFields.router)
+# app.include_router(MetaDataValidations.router)
+# app.include_router(MultipleParam.router)
 # app.include_router(NumericValidation.router)
 # app.include_router(PathMetadata.router)
 # app.include_router(QueryMetadata.router)
